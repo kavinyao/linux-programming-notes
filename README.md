@@ -12,4 +12,5 @@ The notes are organized by chapters.
 The notes would reference two books:
 
 * Beginning Linux Programming, 4th Edition
-* Advanced Unix Programming Environment, 2nd Edition
+* Advanced Programming Unix Environment, 2nd Edition
+new text
