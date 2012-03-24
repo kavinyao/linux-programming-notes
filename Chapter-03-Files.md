@@ -79,8 +79,11 @@ For example, system calls do not handle buffer, i.e. it reads or write as much a
 File descriptor is a small non-negative integer which represents an open file. For each program, three file descriptors are commonly opened by default. They are:
 
 * standard input, `STDIN_FILENO` (0)
+    * this is default to the keyboard
 * standard ouput, `STDOUT_FILENO` (1)
+    * this is default to the monitor
 * standard error, `STDERR_FILENO` (2)
+    * this is also default to the monitor
 
 ### `open` System Call
 
@@ -92,7 +95,7 @@ The call returns the file descriptor of opened file.
 
 Q: why `flags` is `int`?
 
-A: different flags are set to different bit, hence they can be ORed (|) together to aggregate composite value.The basic three flags are  `O_RDONLY`, `O_WRONLY` and `O_RDWR` and they are exlucsive to each other.
+A: This technique is called **bit map** and is a both important and commonly used. Bit maps minimizes usage of space and can be ORed (|) together to aggregate composite value.The basic three flags are  `O_RDONLY`, `O_WRONLY` and `O_RDWR` and they are exlucsive to each other. 
 
 If `O_APPEND` flag is set, the append action will be atomic.
 

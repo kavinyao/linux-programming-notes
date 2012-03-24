@@ -53,6 +53,18 @@ The default shell of many UNIX/Linux distributions is Bash. The following three 
 
 In some Linux distributions, the `service` script to manage services is also common.
 
+### Tips
+
+1. `echo $$` prints the pid of current shell
+    * a hack: using the pid of current shell to name a temporary file to avoid name clash
+1. `set` sets environment variable and `export` makes the environment change applicable to subprocesses
+1. `env` runs a program in a modified environment
+    * often used in `shebang` to overcome distribution differences of command paths
+1. `expr` command is way too slow as it starts another shell to do the calculation
+    * use $(()) expansion instead
+1. `read` stores contents read in variable `$REPLY`
+1. always surround double quotes around variables when testing to avoid the syntax error in case of blank string
+
 ## Advanced Shell Script Usages
 
 ### Empty Statement

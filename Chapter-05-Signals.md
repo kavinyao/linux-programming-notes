@@ -28,6 +28,15 @@ When performing jobs at shell, three key combinations are frequently used to let
 
 After a process is suspended by `SIGSTOP`, the user can explicitly wake it up by `kill -s SIGCONG <pid>` or implicilty do it using `fg` or `bg` command.
 
+When a user closes shell, a `SIGHUP` is sent to every child process of the shell and the default handler just terminates the process. `nohup` command can be used to ignore `SIGHUP`.
+
+### Catching Signals in Shell Script
+
+Use `trap` to catch signals sent to the current script:
+
+* `trap` catches system signals
+* `trap -l` lists system signals
+
 ## Signal Handling
 
 Below are some basic system calls for signal handling, these calls are general and **coarse-grained**.
