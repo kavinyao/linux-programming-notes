@@ -88,26 +88,26 @@ File system can have different meaning in different contexts:
 
 ### Directories in Linux:
 
-* /bin: basic binary files
-* /boot: boot files
-* /dev: hardware devices
-* /etc: configurations
-* /mnt: mount points
-* /proc: mirror of the process
-* /root: home directory of root account
-* /sbin: executables for administrative tasks, also /usr/sbin and /usr/local/sbin
-* /tmp: temporary files
-* /usr: unix system resource, often very large
-* /var: variable files
-* /lost+found: recovered files after a power shutdown
+* `/bin`: basic binary files
+* `/boot`: boot files
+* `/dev`: hardware devices
+* `/etc`: configurations
+* `/mnt`: mount points
+* `/proc`: mirror of the process
+* `/root`: home directory of root account
+* `/sbin`: executables for administrative tasks, also /usr/sbin and /usr/local/sbin
+* `/tmp`: temporary files
+* `/usr`: unix system resource, often very large
+* `/var`: variable files
+* `/lost+found`: recovered files after a power shutdown
 
 ### Useful File Commands
 
-* od: octal display
-* strings: view strings of a binary file
-* file: determine file type
-* lpd: linear printing daemon
-* wc: word count
+* `od`: octal display
+* `strings`: view strings of a binary file
+* `file`: determine file type
+* `lpd`: linear printing daemon
+* `wc`: word count
 
 ## Programming Linux
 

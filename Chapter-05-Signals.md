@@ -21,7 +21,7 @@ There are various ways to produce a signal:
 When performing jobs at shell, three key combinations are frequently used to let shell trigger corresponding signals to running program:
 
 * `Ctrl-C` sends `SIGINT` and by default it causes the process to terminate immediately
-* `Ctrl-Z` sends `SIGSTOP` and by default it causes the process to suspend execution
+* `Ctrl-Z` sends `SIGTSTP` and by default it causes the process to suspend execution
 * `Ctrl-\` sends `SIGQUIT` and by default it causes the process to terminate and dump core
 
 **Note** that the default behaviors of the three signals are not guaranteed as programs are free to handle or ignore them.

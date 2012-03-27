@@ -61,7 +61,7 @@ In some Linux distributions, the `service` script to manage services is also com
 1. `env` runs a program in a modified environment
     * often used in `shebang` to overcome distribution differences of command paths
 1. `expr` command is way too slow as it starts another shell to do the calculation
-    * use $(()) expansion instead
+    * use `$(())` expansion instead
 1. `read` stores contents read in variable `$REPLY`
 1. always surround double quotes around variables when testing to avoid the syntax error in case of blank string
 
