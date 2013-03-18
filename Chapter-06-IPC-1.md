@@ -134,16 +134,10 @@ There is also a `struct ipc_term` for permission controlling.
 
 ### SV IPC System Calls overview
 
-    -----------------------------------------------------------------------------------
-    feature          |    message queue     |  semaphore        | shared memory
-    -----------------------------------------------------------------------------------
-    allocate an IPC  |      msgget          | semget            | shmget
-    object           |                      |                   |
-    -----------------------------------------------------------------------------------
-    send/receive     |      msgsnd          | semop             | shmat
-    message, etc     |      msgrcv          |                   | shmdt
-    -----------------------------------------------------------------------------------
-    IPC control      |      msgctl          | semctl            | shmctl
-    -----------------------------------------------------------------------------------
+feature          |    message queue     |  semaphore        | shared memory
+-----------------|----------------------|-------------------|----------------------
+allocate an IPC object |      `msgget`          | `semget`            | `shmget`
+send/receive message, etc     |      `msgsnd`/`msgrcv`          | `semop`             | `shmat`/`shmdt`
+IPC control      |      `msgctl`          | `semctl`            | `shmctl`
 
 **Criticism**: in the POSIX standard interface, semaphores are created/manipulated as sets. While the intention might be good, in reality semaphores are manipulated one at a time. This design just make the delicate IPC more complicated.
