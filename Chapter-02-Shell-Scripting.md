@@ -32,24 +32,24 @@ Since `$PATH` is an attribute of shell, if you want to change the `$PATH` of the
 
 ### Ways to Execute Shell Scripts
 
-1. `sh script\_file`
+1. `sh script_file`
 
-2. `chmod +x script\_file` (chown, chgrp optionally), then
+2. `chmod +x script_file` (chown, chgrp optionally), then
 
-   `./script\_file`
-3. `source script\_file` or `. script\_file`
+   `./script_file`
+3. `source script_file` or `. script_file`
 
-NOTE: using `sh script\_file` or `./script` forks a new process while `. script\_file` doesn't.
+NOTE: using `sh script_file` or `./script` forks a new process while `. script_file` doesn't.
 
-So when the last statement in script\_file is `exit 0`, with `. script\_file`, the shell that executes the command will exit
+So when the last statement in script_file is `exit 0`, with `. script_file`, the shell that executes the command will exit
 
 ### Common Scripts
 
 The default shell of many UNIX/Linux distributions is Bash. The following three dotfiles are common:
 
-* `.bash\_profile` is executed when a user logs in
-* `.bash\_rc` is executed when a new bash is started
-* `.bash\_logout`  is executed when a users logs out
+* `.bash_profile` is executed when a user logs in
+* `.bash_rc` is executed when a new bash is started
+* `.bash_logout`  is executed when a users logs out
 
 In some Linux distributions, the `service` script to manage services is also common.
 
