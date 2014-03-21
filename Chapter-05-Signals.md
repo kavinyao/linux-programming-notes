@@ -26,7 +26,7 @@ When performing jobs at shell, three key combinations are frequently used to let
 
 **Note** that the default behaviors of the three signals are not guaranteed as programs are free to handle or ignore them.
 
-After a process is suspended by `SIGSTOP`, the user can explicitly wake it up by `kill -s SIGCONG <pid>` or implicilty do it using `fg` or `bg` command.
+After a process is suspended by `SIGSTOP`, the user can explicitly wake it up by `kill -s SIGCONT <pid>` or implicilty do it using `fg` or `bg` command.
 
 When a user closes shell, a `SIGHUP` is sent to every child process of the shell and the default handler just terminates the process. `nohup` command can be used to ignore `SIGHUP`.
 
